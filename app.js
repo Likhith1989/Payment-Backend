@@ -212,10 +212,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url:
-        "https://6672e0e670b58f2df79eb373--peaceful-pika-d60bd9.netlify.app/success",
-      cancel_url:
-        "https://6672e0e670b58f2df79eb373--peaceful-pika-d60bd9.netlify.app/cancel",
+      success_url: "https://peaceful-pika-d60bd9.netlify.app/success",
+      cancel_url: "https://peaceful-pika-d60bd9.netlify.app/cancel",
     });
 
     res.json({ id: session.id });
