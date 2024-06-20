@@ -12,14 +12,14 @@ const base = "https://api-m.sandbox.paypal.com";
 const PORT = process.env.PORT;
 app.use(express.static("client"));
 app.use(express.json());
-const corsOptions = {
-  origin: "https://bright-parfait-a71def.netlify.app/payment-options", // Replace with your Netlify app URL
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true, // Enable this if you need to send cookies
-  optionsSuccessStatus: 200, // Some legacy browsers choke on 204
-};
+// const corsOptions = {
+//   origin: "https://bright-parfait-a71def.netlify.app/payment-options", // Replace with your Netlify app URL
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   credentials: true, // Enable this if you need to send cookies
+//   optionsSuccessStatus: 200, // Some legacy browsers choke on 204
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 /*Checkout API for PayPal*/
 
