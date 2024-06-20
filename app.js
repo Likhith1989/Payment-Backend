@@ -13,7 +13,7 @@ const PORT = process.env.PORT;
 app.use(express.static("client"));
 app.use(express.json());
 const corsOptions = {
-  origin: "*",
+  origin: "https://bright-parfait-a71def.netlify.app",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
