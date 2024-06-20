@@ -12,7 +12,13 @@ const base = "https://api-m.sandbox.paypal.com";
 const PORT = process.env.PORT;
 app.use(express.static("client"));
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 /*Checkout API for PayPal*/
 
